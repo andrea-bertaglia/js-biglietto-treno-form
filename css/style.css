@@ -1,0 +1,148 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* COMMON */
+body {
+  background-color: lightskyblue;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3em;
+}
+
+.logo-container img {
+  max-width: 75px;
+}
+
+.logo-container .logo-text {
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #001633;
+}
+
+/* MAIN */
+main h2 {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.box {
+  background-color: #fff;
+  margin: 2em 0;
+  color: #001633;
+  margin: 0 auto;
+  width: 700px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 1em;
+}
+
+.col {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.col label {
+  font-size: small;
+  padding-bottom: 0.5em;
+}
+
+.col input,
+select {
+  border: 1px solid #001633;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  padding: 0.5em;
+}
+
+button {
+  background-color: #001633;
+  border: 0;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-group {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.result-container {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.box {
+  border: 1px solid #001633;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px 0px #000000;
+  -moz-box-shadow: 5px 5px 10px 0px #000000;
+  -o-box-shadow: 5px 5px 10px 0px #000000;
+  box-shadow: 5px 5px 10px 0px #000000;
+}
+
+.result-container span {
+  font-weight: bold;
+  padding-bottom: 1.5em;
+}
+
+.result-table {
+  color: #001633;
+  font-size: small;
+}
+
+.result-table th {
+  padding-bottom: 2em;
+  text-align: left;
+}
+
+.result-table th:nth-child(1),
+.result-table th:nth-child(2),
+.result-table th:nth-child(3) {
+  padding-right: 2.5em;
+}
+
+#banner {
+  padding: 0.5em 3em;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #00e164;
+  font-weight: bold;
+  -webkit-box-shadow: 5px 5px 10px 0px #000000;
+  -moz-box-shadow: 5px 5px 10px 0px #000000;
+  -o-box-shadow: 5px 5px 10px 0px #000000;
+  box-shadow: 5px 5px 10px 0px #000000;
+  transform: translate(0, 15px);
+}
+
+.d-none {
+  display: none;
+}

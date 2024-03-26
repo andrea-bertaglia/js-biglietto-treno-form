@@ -7,6 +7,8 @@ console.log(userBtnElem);
 
 // 2. Aggiunta event listener al bottone
 userBtnElem.addEventListener("click", function () {
+document.querySelector(".banner-message").classList.add("d-none");  
+document.querySelector(".result-container").classList.remove("d-none");  
 console.log("CLICK BUTTON");
 
     // 1. Raccolta dati
@@ -14,8 +16,11 @@ console.log("CLICK BUTTON");
     const userKm = parseInt((document.getElementById("user-km")).value); // (string parsed to) number | null
     console.log("input km", userKm, typeof userKm);
 
-    const userAge = parseInt((document.getElementById("user-age")).value); // (string parsed to) number | null
+    const userAge = (document.getElementById("user-age")).value; // string | null
     console.log("input age",userAge, typeof userAge);
+
+    const userName = (document.getElementById("user-name")).value; // string | null
+    console.log("input name",userName, typeof userName);
 
     // Dichiarazione delle variabili sconto, prezzo netto e prezzo lordo
     let discount = 0; // number
@@ -24,6 +29,7 @@ console.log("CLICK BUTTON");
     const price = 0.21; // number
     const discountUnder18 = 0.20; // number
     const discountOver65 = 0.40; // number
+    let bannerMessage = " "; // string
 
     // 2. Logica
     // Calcolo del prezzo lordo
@@ -31,12 +37,16 @@ console.log("CLICK BUTTON");
     console.log("gross: ", gross);
 
     // Controllo del tipo di sconto da applicare
-    if (userAge < 18) {
+    if (userAge === "under18") {
         discount = gross * discountUnder18; // number
         console.log("discount: ", discount);
-    } else if (userAge >= 65) {
+        bannerMessage = document.getElementById("banner").innerHTML = "Hai diritto allo sconto del 20%";
+        document.querySelector(".banner-message").classList.remove("d-none");
+    } else if (userAge === "over65") {
         discount = gross * discountOver65; // number
         console.log("discount: ", discount);
+        bannerMessage = document.getElementById("banner").innerHTML = "Hai diritto allo sconto del 40%";
+        document.querySelector(".banner-message").classList.remove("d-none");
     }
 
     // Calcolo del prezzo netto (prezzo lordo - sconto)
@@ -45,7 +55,10 @@ console.log("CLICK BUTTON");
 
     // 3. Output
     // Preparazione del messaggio con il totale
-    const resultMessage = `L'importo da pagare è: ${net.toFixed(2)} €` // string | null
+    const resultMessage = `${net.toFixed(2)} €` // string | null
     console.log(resultMessage);
 
+    // Stampo i dati in pagina
+    document.getElementById("result").innerHTML = resultMessage;
+    document.getElementById("name").innerHTML = userName;
 })

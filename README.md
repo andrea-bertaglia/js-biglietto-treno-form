@@ -59,3 +59,17 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
+
+### Variazioni rispetto alla Milestone 1
+
+1. Raccolta dati
+
+   - [x] Aggiunta variabile per il banner che comunica lo sconto applicato
+
+2. Logica
+
+   - [x] Preparazione del messaggio su quale sconto a diritto il cliente, in base all'età
+   - [x] Applicazione della proprietà display none per il banner solo per minorenni e over 65
+
+3. Output
+   - [x] Stampa in pagina dello nome e del totale
